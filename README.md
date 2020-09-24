@@ -12,4 +12,4 @@ ________________
 
 Bons voos meus amigos comandantes.
 
-![](https://github.com/fcamargo10/checklist-c152-fc/blob/master/check1.png?raw=true | width=100)
+![](https://github.com/fcamargo10/checklist-c152-fc/blob/master/check1.png?raw=true)
