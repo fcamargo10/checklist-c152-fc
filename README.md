@@ -13,3 +13,10 @@ ________________
 Bons voos meus amigos comandantes.
 
 ![](https://github.com/fcamargo10/checklist-c152-fc/blob/master/check1.png?raw=true)
+![](https://github.com/fcamargo10/checklist-c152-fc/blob/master/check2.png?raw=true)
+![](https://github.com/fcamargo10/checklist-c152-fc/blob/master/check3.png?raw=true)
+![](https://github.com/fcamargo10/checklist-c152-fc/blob/master/check4.png?raw=true)
+![](https://github.com/fcamargo10/checklist-c152-fc/blob/master/check5.png?raw=true)
+![](https://github.com/fcamargo10/checklist-c152-fc/blob/master/check6.png?raw=true)
+![](https://github.com/fcamargo10/checklist-c152-fc/blob/master/check7.png?raw=true)
+![](https://github.com/fcamargo10/checklist-c152-fc/blob/master/check8.png?raw=true)
