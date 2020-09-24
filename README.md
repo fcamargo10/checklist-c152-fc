@@ -1,4 +1,4 @@
-## Checklist Aprimorado C152 | Improved Flights Simulator 2020 Cessna 152 Checklist
+## Checklist Aprimorado C152 | Flight Simulator 2020 Improved Cessna 152 Checklist
 
 Olá comandantes!
 Eu criei um checklist interativo aprimorado do Cessna 152 e estou compartilhando com vocês, ele ainda não está completo da forma como eu gostaria mas devagarzinho eu vou atualizando.
