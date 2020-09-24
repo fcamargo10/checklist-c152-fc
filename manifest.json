@@ -1,0 +1,21 @@
+{
+  "dependencies": [
+    {
+      "name": "asobo-aircraft-c152",
+      "package_version": "0.1.2"
+    }
+  ],
+  "content_type": "AIRCRAFT",
+  "title": "Cessna 152",
+  "manufacturer": "Textron Aviation",
+  "creator": "Filipe Camargo",
+  "package_version": "0.1.48",
+  "minimum_game_version": "1.8.2",
+  "release_notes": {
+    "neutral": {
+      "LastUpdate": "",
+      "OlderHistory": ""
+    }
+  },
+  "total_package_size": "00000000000517024473"
+}

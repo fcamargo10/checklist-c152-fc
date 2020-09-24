@@ -1,0 +1,54 @@
+{
+	"content": [
+		{
+			"path": "de-DE.locPak",
+			"size": 1791,
+			"date": 132434641671200534
+		},
+		{
+			"path": "en-US.locPak",
+			"size": 1369,
+			"date": 132434641671180541
+		},
+		{
+			"path": "es-ES.locPak",
+			"size": 1474,
+			"date": 132434641671170537
+		},
+		{
+			"path": "fr-FR.locPak",
+			"size": 1542,
+			"date": 132434641671210530
+		},
+		{
+			"path": "it-IT.locPak",
+			"size": 1574,
+			"date": 132434641671210530
+		},
+		{
+			"path": "pl-PL.locPak",
+			"size": 1479,
+			"date": 132434641671180541
+		},
+		{
+			"path": "pt-BR.locPak",
+			"size": 1522,
+			"date": 132434641671160536
+		},
+		{
+			"path": "ru-RU.locPak",
+			"size": 2510,
+			"date": 132434641671190523
+		},
+		{
+			"path": "SimObjects/Airplanes/Asobo_C152/Checklist/Cessna152_Checklist.xml",
+			"size": 6889,
+			"date": 132440536060000000
+		},
+		{
+			"path": "SimObjects/Airplanes/Asobo_C152/Checklist/Library.xml",
+			"size": 1232,
+			"date": 132440538350000000
+		}
+	]
+}
