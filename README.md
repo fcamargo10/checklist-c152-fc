@@ -1,4 +1,4 @@
-## Checklist Aprimorado C152 - FS2020 / Flight Simulator 2020 Cessna 152 Checklist.
+## Checklist Aprimorado C152 - FS2020
 Olá comandantes!
 Eu criei um checklist interativo aprimorado do Cessna 152 e estou compartilhando com vocês, ele ainda não está completo da forma como eu gostaria mas devagarzinho eu vou atualizando.
 ________________
@@ -12,4 +12,4 @@ ________________
 
 Bons voos meus amigos comandantes.
 
-![Uma captura de tela do primeiro passo do checklist.](https://github.com/fcamargo10/checklist-c152-fc/blob/master/check1.png?raw=true)
+![Uma captura de tela do primeiro passo do checklist.](https://github.com/fcamargo10/checklist-c152-fc/blob/master/check1.png?raw=true =200x) ![Uma captura de tela do primeiro passo do checklist.](https://github.com/fcamargo10/checklist-c152-fc/blob/master/check2.png?raw=true =200x) ![Uma captura de tela do primeiro passo do checklist.](https://github.com/fcamargo10/checklist-c152-fc/blob/master/check3.png?raw=true =200x) ![Uma captura de tela do primeiro passo do checklist.](https://github.com/fcamargo10/checklist-c152-fc/blob/master/check4.png?raw=true =200x) ![Uma captura de tela do primeiro passo do checklist.](https://github.com/fcamargo10/checklist-c152-fc/blob/master/check5.png?raw=true =200x) ![Uma captura de tela do primeiro passo do checklist.](https://github.com/fcamargo10/checklist-c152-fc/blob/master/check6.png?raw=true =200x)
