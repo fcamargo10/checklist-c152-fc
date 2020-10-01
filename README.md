@@ -14,7 +14,7 @@ ________________
  4. Abra o simulador, carregue sua aeronave e então abre a aba de checklist.
  
  Video de um grande aviador utilizando e explicando um pouco sobre o script:
- [![C152](https://img.youtube.com/vi/GKFDYYvy3U/0.jpg)](https://www.youtube.com/watch?v=GKFDYYvy3U)
+ [![C152](https://img.youtube.com/vi/_GKFDYYvy3U/0.jpg)](https://www.youtube.com/watch?v=_GKFDYYvy3U)
 
 Bons voos meus amigos comandantes.
 
