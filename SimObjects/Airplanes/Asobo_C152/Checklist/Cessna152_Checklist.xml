@@ -5,6 +5,8 @@
 		<IncludeCheckpointLibrary FileName="CheckpointsLibrary\\Asobo_DefaultCheckpointLibrary.xml"/>
 		<IncludeCheckpointLibrary FileName="SimObjects\\Airplanes\\Asobo_C152\\Checklist\\Library.xml"/>
 
+
+
 		<Step ChecklistStepId="PREFLIGHT_GATE">
 			<!-- Preflight inspection - cockpit 1/2 -->
 			<Page SubjectTT="TT:GAME.CHECKLIST_CABIN">
@@ -37,10 +39,6 @@
 
 				<Checkpoint ReferenceId="Master_Switch_Alt_And_Bat_Off">
 					<ForceCamera name="Instruments04"/>
-				</Checkpoint>
-
-				<Checkpoint ReferenceId="Fuel_Shutoff_Valve_Open">
-					<ForceCamera name="Instruments06"/>
 				</Checkpoint>
 
 			</Page>
@@ -82,11 +80,11 @@
 					<ForceCamera name="Instruments02"/>
 				</Checkpoint>
 
-				<Checkpoint ReferenceId="Master_Switch_On">
+				<Checkpoint ReferenceId="Beacon_Light_On">
 					<ForceCamera name="Instruments04"/>
 				</Checkpoint>
 
-				<Checkpoint ReferenceId="Beacon_Light_On">
+				<Checkpoint ReferenceId="Master_Switch_On">
 					<ForceCamera name="Instruments04"/>
 				</Checkpoint>
 
@@ -104,6 +102,7 @@
 				</Checkpoint>
 
 				<Checkpoint ReferenceId="ALL_ELECTRICAL_EQUIPMENT_OFF">
+					<ForceCamera name="Instruments04"/>
 				</Checkpoint>
 
 				<Checkpoint ReferenceId="Ignition_Start">
@@ -142,19 +141,30 @@
 					<ForceCamera name="Instruments02"/>
 				</Checkpoint>
 			</Page>
+
 		</Step>
+
 		<Step ChecklistStepId="PREFLIGHT_TAXI_OUT">
 			<!-- Taxi -->
 			<Page SubjectTT="TT:GAME.CHECKLIST_TAXI">
-
 				<Checkpoint ReferenceId="Taxi_Clearance_Received"/>
-				<Checkpoint ReferenceId="Taxi_Light_On"/>
-				<Checkpoint ReferenceId="Parking_Brake_Release"/>
+
+				<Checkpoint ReferenceId="Taxi_Light_On">
+					<ForceCamera name="Instruments02"/>
+				</Checkpoint>
+
+				<Checkpoint ReferenceId="Navigation_Lights_On">
+					<ForceCamera name="Instruments02"/>
+				</Checkpoint>
+
+				<Checkpoint ReferenceId="Parking_Brake_Release">
+					<ForceCamera name="Instruments04"/>
+				</Checkpoint>
 				<Checkpoint ReferenceId="Brakes_Test"/>
 				<Checkpoint ReferenceId="Rudder_Test"/>
-
 			</Page>
 		</Step>
+
 		<Step ChecklistStepId="FLIGHT_RUNWAY">
 			<!-- Run-up 1/3 -->
 			<Page SubjectTT="TT:GAME.CHECKLIST_RUN_UP_1">
@@ -185,13 +195,17 @@
 					<ForceCamera name="Instruments07"/>
 				</Checkpoint>
 
-				<Checkpoint ReferenceId="Magneto_Both"/>
+				<Checkpoint ReferenceId="Magneto_Both">
+					<ForceCamera name="Instruments05"/>
+				</Checkpoint>
 
 				<Checkpoint ReferenceId="Engine_Idle_Check_600-700_RPM">
 					<ForceCamera name="Instruments02"/>
 				</Checkpoint>
 
-				<Checkpoint ReferenceId="Throttle_Adjust_1000_RPM" />
+				<Checkpoint ReferenceId="Throttle_Adjust_1000_RPM">
+					<ForceCamera name="Instruments07"/>
+				</Checkpoint>
 
 			</Page>
 
@@ -209,9 +223,12 @@
 				<Checkpoint ReferenceId="Landing_Light_As_Required">
 					<CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_LANDING_LIGHT" ExpectationTT="TT:GAME.CHECKLIST_ON_IF_REQUIRED"/>
 				</Checkpoint>
-				<Checkpoint ReferenceId="Parking_Brake_Release"/>
+				<Checkpoint ReferenceId="Parking_Brake_Release">
+					<ForceCamera name="Instruments04"/>
+				</Checkpoint>
 			</Page>
 		</Step>
+
 		<Step ChecklistStepId="FLIGHT_TAKEOFF">
 			<!-- Normal take-off -->
 			<Page SubjectTT="TT:GAME.CHECKLIST_NORMAL_TAKE_OFF">
@@ -231,58 +248,298 @@
 					</SetTemplateValue>
 					<ForceCamera name="Pilot"/>
 				</Checkpoint>
-				<Checkpoint ReferenceId="Flaps_Up_Above_300_Ft">
-					<ForceCamera name="Radio Stack Bottom"/>
-				</Checkpoint>
 			</Page>
 			<!-- Enroute climb -->
 			<Page SubjectTT="TT:GAME.CHECKLIST_ENROUTE_CLIMB">
+
+				<Checkpoint Id="Flaps_Up_Above_400_Ft">
+					<Clue name="Os flaps devem estar na posição 0 ao alcançar 400 pés"/>
+					<ForceCamera name="Radio Stack Bottom"/>
+					<Feedback name="Os flaps serão retraídos ao atingir 400 pés"/>
+					<CheckpointDesc SubjectTT="Flaps" ExpectationTT="Subir acima de 400 pés"/>
+					<Sequence SeqType="Unordered">
+						<Test>
+							<TestValue>
+								<Operator OpType="GREATER">
+									<Val SimVarName="PLANE ALT ABOVE GROUND" Units="feet"/>
+									<Val Value="400"/>
+								</Operator>
+							</TestValue>
+							<Action Copilot="True" Condition="TestValueFalse" SpecialAction="WaitUntilTestValueValidated"/>
+						</Test>
+						<Test>
+							<TestValue>
+								<Operator OpType="EQUAL">
+									<Val SimVarName="FLAPS HANDLE PERCENT" Units="percent"/>
+									<Val Value="0"/>
+								</Operator>
+							</TestValue>
+							<Instrument Id="HANDLING_Lever_Flaps"/>
+							<Action Copilot="True" Condition="TestValueFalse" Once="true" EventID="FLAPS_UP"/>
+						</Test>
+					</Sequence>
+				</Checkpoint>
+
 				<Checkpoint ReferenceId="Airspeed_70-85_KIAS"/>
-				<ForceCamera name="ClosePilot"/>
 				<Checkpoint ReferenceId="Throttle_Full"/>
 				<Checkpoint ReferenceId="Mixture_Rich"/>
 				<Checkpoint ReferenceId="Engine_Gauges_Check"/>
 				<Checkpoint ReferenceId="Lights_Off_Above_1000_Ft"/>
 				<Checkpoint ReferenceId="Mixture_Lean_Above_3000_Ft">
 				</Checkpoint>
+
 			</Page>
 		</Step>
+
 		<Step ChecklistStepId="FLIGHT_CRUISE">
-			<!-- Cruise -->
-			<Checkpoint ReferenceId="Elevator_Trim_Set"/>
-			<Checkpoint ReferenceId="Mixture_Richen">
-				<CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_MIXTURE" ExpectationTT="TT:GAME.CHECKLIST_LEAN_FOR_ALTITUDE"/>
-			</Checkpoint>
+
+			<Page SubjectTT="TT:GAME.CHECKLIST_CRUISE">
+				<Checkpoint ReferenceId="RPM_2240_TO_2300_RPM" />
+				<Checkpoint ReferenceId="Elevator_Trim_Set"/>
+				<Checkpoint ReferenceId="Engine_Gauges_Check"/>
+			</Page>
+
 		</Step>
+
 		<Step ChecklistStepId="FLIGHT_DESCENT">
 			<!-- Descent -->
 			<Page SubjectTT="TT:GAME.CHECKLIST_DESCENT">
+
+				<Checkpoint ReferenceId="Seats_Belts_Check_Secure"/>
+
+				<Checkpoint ReferenceId="Mixture_Rich">
+					<ForceCamera name="Instruments02"/>
+				</Checkpoint>
+
+				<Checkpoint ReferenceId="Flight_Instruments_Check_Descent">
+					<ForceCamera name="ClosePilot"/>
+				</Checkpoint>
+
+				<Checkpoint ReferenceId="Parking_Brake_Release">
+					<ForceCamera name="Instruments04"/>
+				</Checkpoint>
+
+				<Checkpoint ReferenceId="Oil_Pressure_In_Green_Sector">
+					<ForceCamera name="Instruments04"/>
+				</Checkpoint>
+
+				<Checkpoint ReferenceId="Oil_Temperature_Check">
+					<ForceCamera name="Instruments04"/>
+				</Checkpoint>
+
+				<Checkpoint ReferenceId="Circuit_Breakers_All_Pushed">
+					<ForceCamera name="Instruments05"/>
+				</Checkpoint>
+
+				<Checkpoint ReferenceId="Magneto_Both">
+					<ForceCamera name="Instruments04"/>
+				</Checkpoint>
+				<Checkpoint ReferenceId="Master_Switch_On">
+					<ForceCamera name="Instruments04"/>
+				</Checkpoint>
+
+
+				<Checkpoint ReferenceId="Approach_Brief_Complete"/>
+
 			</Page>
 		</Step>
+
 		<Step ChecklistStepId="LANDING_APPROACH">
 			<!-- Before landing -->
 			<Page SubjectTT="TT:GAME.CHECKLIST_BEFORE_LANDING">
+
+				<Checkpoint ReferenceId="Mixture_Rich">
+					<ForceCamera name="Instruments02"/>
+				</Checkpoint>
+
+				<Checkpoint ReferenceId="Carb_Heat_Cold">
+					<!-- Carburetor Heat - - COLD. -->
+					<ForceCamera name="Instruments02"/>
+				</Checkpoint>
+
+				<Checkpoint ReferenceId="Throttle_Adjust_1600_RPM">
+					<ForceCamera name="Instruments02"/>
+				</Checkpoint>
+
+				<Checkpoint ReferenceId="Flaps_10-20_Degrees">
+					<ForceCamera name="Instruments05"/>
+				</Checkpoint>
+
+				<Checkpoint ReferenceId="Final_Approach_Airspeed_60-70_KIAS">
+					<ForceCamera name="Instruments02"/>
+				</Checkpoint>
+
+				<Checkpoint ReferenceId="Landing_Light_On">
+					<ForceCamera name="Instruments04"/>
+				</Checkpoint>
+
 			</Page>
 		</Step>
+
 		<Step ChecklistStepId="LANDING_TOUCHDOWN">
 			<!-- Normal landing -->
+
 			<Page SubjectTT="TT:GAME.CHECKLIST_NORMAL_LANDING">
+				<Checkpoint ReferenceId="Flaps_Down">
+					<ForceCamera name="Instruments05"/>
+				</Checkpoint>
+				<Checkpoint ReferenceId="Final_Approach_Airspeed_60-70_KIAS">
+					<ForceCamera name="Instruments02"/>
+				</Checkpoint>
 			</Page>
+
 		</Step>
+
 		<Step ChecklistStepId="LANDING_GROUNDROLL">
 			<!-- After landing -->
 			<Page SubjectTT="TT:GAME.CHECKLIST_AFTER_LANDING">
+
+				<Checkpoint ReferenceId="PITOT_STATIC_HEATERS_OFF">
+					<ForceCamera name="Instruments04"/>
+				</Checkpoint>
+
+				<Checkpoint ReferenceId="Flaps_0">
+					<ForceCamera name="Instruments05"/>
+				</Checkpoint>
+
+				<Checkpoint ReferenceId="Transponder_Standby">
+					<ForceCamera name="Instruments02"/>
+				</Checkpoint>
+
+				<Checkpoint ReferenceId="Landing_Light_Off">
+					<ForceCamera name="Instruments04"/>
+				</Checkpoint>
+
 			</Page>
 		</Step>
+
 		<Step ChecklistStepId="LANDING_TAXI_IN">
+
+			<Page SubjectTT="TT:GAME.CHECKLIST_TAXI">
+				<Checkpoint ReferenceId="Taxi_Clearance_Received"/>
+				<Checkpoint ReferenceId="Taxi_Light_On">
+					<ForceCamera name="Instruments02"/>
+				</Checkpoint>
+				<Checkpoint ReferenceId="Strobe_Lights_Off">
+					<ForceCamera name="Instruments02"/>
+				</Checkpoint>
+
+			</Page>
+
 		</Step>
+
 		<Step ChecklistStepId="LANDING_GATE">
 			<!-- Parking -->
+
 			<Page SubjectTT="TT:GAME.CHECKLIST_PARKING">
+
+				<Checkpoint ReferenceId="Parking_Brake_Set">
+					<ForceCamera name="Instruments02"/>
+				</Checkpoint>
+
+				<Checkpoint ReferenceId="Throttle_Adjust_1000_RPM">
+					<ForceCamera name="Instruments02"/>
+				</Checkpoint>
+
+				<Checkpoint ReferenceId="Radios_Off">
+					<ForceCamera name="Instruments03"/>
+				</Checkpoint>
+
+				<Checkpoint ReferenceId="ALL_ELECTRICAL_EQUIPMENT_OFF">
+					<ForceCamera name="Instruments04"/>
+				</Checkpoint>
+
+				<Checkpoint ReferenceId="Mixture_Lean">
+					<ForceCamera name="Instruments02"/>
+				</Checkpoint>
+
+				<Checkpoint ReferenceId="POWER_LEVER_IDLE">
+					<ForceCamera name="Instruments02"/>
+				</Checkpoint>
+
+				<Checkpoint ReferenceId="Ignition_Off">
+					<ForceCamera name="Instruments04"/>
+				</Checkpoint>
+
+				<Checkpoint ReferenceId="Master_Switch_Alt_And_Bat_Off">
+					<ForceCamera name="Instruments04"/>
+				</Checkpoint>
+
+				<Checkpoint ReferenceId="Beacon_Light_Off">
+					<ForceCamera name="Instruments04"/>
+				</Checkpoint>
+
+				<Checkpoint ReferenceId="CONTROL_LOCKS_ON">
+					<CheckpointDesc SubjectTT="TT:GAME.CHECKLIST_CONTROL_LOCKS" ExpectationTT="TT:GAME.CHECKLIST_ON"/>
+				</Checkpoint>
+
+
 			</Page>
 			<!-- Securing-->
 			<Page SubjectTT="TT:GAME.CHECKLIST_SECURING">
 			</Page>
+		</Step>
+
+		<Step ChecklistStepId="LANDING_GATE">
+
+			<Page SubjectTT="TT:MENU.CHECKLIST.EMERGENCY">
+
+				<Block SubjectTT="Fogo no motor em voo">
+
+					<Checkpoint ReferenceId="Mixture_Lean">
+						<ForceCamera name="Instruments02"/>
+					</Checkpoint>
+
+					<Checkpoint ReferenceId="Fuel_Selector_Off">
+						<ForceCamera name="Instruments02"/>
+					</Checkpoint>
+
+					<Checkpoint ReferenceId="Master_Switch_Alt_And_Bat_Off">
+						<ForceCamera name="Instruments04"/>
+					</Checkpoint>
+
+					<Checkpoint Id="Airspeed_70_KIAS">
+						<Clue name="Mantenha a velocidade indicada em 70 nós nesta fase"/>
+						<CheckpointDesc SubjectTT="Velocidade em relação ao ar" ExpectationTT="70 nós"/>
+						<Test>
+							<TestValue>
+								<Operator OpType="BETWEEN">
+									<Val SimVarName="AIRSPEED INDICATED" Units="knots"/>
+									<Val Value="70"/>
+									<Val Value="75"/>
+								</Operator>
+							</TestValue>
+							<Instrument Id="INSTRUMENT_Needle_Airspeed_Highlight"/>
+							<Action Copilot="True" Condition="TestValueFalse" SpecialAction="WaitUntilTestValueValidated"/>
+						</Test>
+					</Checkpoint>
+
+				</Block>
+
+				<Block SubjectTT="Congêlamento em voo">
+
+					<Checkpoint ReferenceId="PITOT_STATIC_HEATERS_ON">
+						<ForceCamera name="Instruments04"/>
+					</Checkpoint>
+
+					<Checkpoint ReferenceId="Throttle_2500_RPM">
+						<ForceCamera name="Instruments02"/>
+					</Checkpoint>
+
+					<Checkpoint ReferenceId="Carb_Heat_Cold">
+						<!-- Carburetor Heat - - COLD. -->
+						<ForceCamera name="Instruments02"/>
+					</Checkpoint>
+
+					<Checkpoint ReferenceId="Mixture_Lean">
+						<ForceCamera name="Instruments02"/>
+					</Checkpoint>
+
+				</Block>
+
+
+			</Page>
+
 		</Step>
 
 	</Checklist.Checklist>

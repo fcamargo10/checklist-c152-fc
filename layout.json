@@ -1,54 +1,79 @@
 {
-	"content": [
-		{
-			"path": "de-DE.locPak",
-			"size": 1791,
-			"date": 132434641671200534
-		},
-		{
-			"path": "en-US.locPak",
-			"size": 1369,
-			"date": 132434641671180541
-		},
-		{
-			"path": "es-ES.locPak",
-			"size": 1474,
-			"date": 132434641671170537
-		},
-		{
-			"path": "fr-FR.locPak",
-			"size": 1542,
-			"date": 132434641671210530
-		},
-		{
-			"path": "it-IT.locPak",
-			"size": 1574,
-			"date": 132434641671210530
-		},
-		{
-			"path": "pl-PL.locPak",
-			"size": 1479,
-			"date": 132434641671180541
-		},
-		{
-			"path": "pt-BR.locPak",
-			"size": 1522,
-			"date": 132434641671160536
-		},
-		{
-			"path": "ru-RU.locPak",
-			"size": 2510,
-			"date": 132434641671190523
-		},
-		{
-			"path": "SimObjects/Airplanes/Asobo_C152/Checklist/Cessna152_Checklist.xml",
-			"size": 6889,
-			"date": 132440536060000000
-		},
-		{
-			"path": "SimObjects/Airplanes/Asobo_C152/Checklist/Library.xml",
-			"size": 1232,
-			"date": 132440538350000000
-		}
-	]
+  "content": [
+    {
+      "path": ".gitignore",
+      "size": 5,
+      "date": 132453974500000000
+    },
+    {
+      "path": "de-DE.locPak",
+      "size": 2060,
+      "date": 132483230205203247
+    },
+    {
+      "path": "en-US.locPak",
+      "size": 1632,
+      "date": 132483230182688051
+    },
+    {
+      "path": "es-ES.locPak",
+      "size": 1534,
+      "date": 132483230156108809
+    },
+    {
+      "path": "fr-FR.locPak",
+      "size": 1602,
+      "date": 132483230135658075
+    },
+    {
+      "path": "it-IT.locPak",
+      "size": 1634,
+      "date": 132483230107343324
+    },
+    {
+      "path": "lang-br.locPak",
+      "size": 1765,
+      "date": 132483226821629047
+    },
+    {
+      "path": "LICENSE",
+      "size": 35149,
+      "date": 132453974500000000
+    },
+    {
+      "path": "MSFSLayoutGenerator.exe",
+      "size": 363520,
+      "date": 132483208372530018
+    },
+    {
+      "path": "pl-PL.locPak",
+      "size": 1748,
+      "date": 132483230351942822
+    },
+    {
+      "path": "README.md",
+      "size": 644,
+      "date": 132453974500000000
+    },
+    {
+      "path": "ru-RU.locPak",
+      "size": 2570,
+      "date": 132483230314332872
+    },
+    {
+      "path": "SimObjects/Airplanes/Asobo_C152/aircraft.cfg",
+      "size": 2947,
+      "date": 132453974500000000
+    },
+    {
+      "path": "SimObjects/Airplanes/Asobo_C152/Checklist/Cessna152_Checklist.xml",
+      "size": 16092,
+      "date": 132483238944625997
+    },
+    {
+      "path": "SimObjects/Airplanes/Asobo_C152/Checklist/Library.xml",
+      "size": 1204,
+      "date": 132453974500000000
+    }
+  ]
 }
