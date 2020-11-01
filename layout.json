@@ -26,7 +26,7 @@
 			"date": 132483230107343324
 		},
 		{
-			"path": "lang-br.locPak",
+			"path": "pt-BR.locPak",
 			"size": 1765,
 			"date": 132483226821629047
 		},
@@ -39,11 +39,6 @@
 			"path": "pl-PL.locPak",
 			"size": 1748,
 			"date": 132483230351942822
-		},
-		{
-			"path": "README.md",
-			"size": 644,
-			"date": 132453974500000000
 		},
 		{
 			"path": "ru-RU.locPak",
