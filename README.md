@@ -5,7 +5,9 @@
 <p align="center">
 <img src="https://img.shields.io/github/license/fcamargo10/checklist-c152-fc?style=plastic">
 <img src="https://img.shields.io/github/repo-size/fcamargo10/checklist-c152-fc?style=plastic">
-<img src="https://img.shields.io/github/v/tag/fcamargo10/checklist-c152-fc?style=plastic">
+<img src="https://img.shields.io/github/v/tag/fcamargo10/checklist-c152-fc?style=plastic"><br>
+<img src="https://img.shields.io/badge/simulator-Flight Simulator 2020-blue?style=plastic&logoColor=white">
+<img src="https://img.shields.io/badge/aircraft-Cessna 152-blue?style=plastic&logoColor=white">
 </p>
 
 _____________
