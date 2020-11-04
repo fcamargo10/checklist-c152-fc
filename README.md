@@ -1,4 +1,4 @@
-![](https://img.shields.io/github/license/fcamargo10/checklist-c152-fc?style=plastic) ![](https://img.shields.io/github/repo-size/fcamargo10/checklist-c152-fc?style=plastic) ![](https://img.shields.io/github/last-commit/fcamargo10/checklist-c152-fc?style=plastic)
+![](https://img.shields.io/github/license/fcamargo10/checklist-c152-fc?style=plastic) ![](https://img.shields.io/github/repo-size/fcamargo10/checklist-c152-fc?style=plastic) ![](https://img.shields.io/github/v/tag/fcamargo10/checklist-c152-fc?style=plastic)
 _____________
 ## Flight Simulator 2020 Cessna 152 Checklist
 
