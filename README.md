@@ -2,7 +2,7 @@
  <a href="http://aviadorvirtual.com.br" target="_blank"><img src="https://flight.aviadorvirtual.com.br/img/logo.png" width="270px"></a>
 </p>
 
-<p align="center">
+
 <img src="https://img.shields.io/github/license/fcamargo10/checklist-c152-fc?style=plastic">
 <img src="https://img.shields.io/github/repo-size/fcamargo10/checklist-c152-fc?style=plastic">
 <img src="https://img.shields.io/github/v/tag/fcamargo10/checklist-c152-fc?style=plastic"><br>
@@ -10,7 +10,8 @@
 <img src="https://img.shields.io/badge/aircraft-Cessna 152-blue?style=plastic&logoColor=white">
 </p>
 <hr>
-
+<p align="center">
+<img src="https://blog.aviadorvirtual.com.br/wp-content/uploads/2020/11/Untitled-1.png">
 <h2>Flight Simulator 2020 Cessna 152 Checklist</h2>
 
 Olá comandantes!
