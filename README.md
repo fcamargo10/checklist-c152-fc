@@ -23,7 +23,7 @@ Eu criei um checklist interativo aprimorado do Cessna 152 e estou compartilhando
 <h2>Manual de instalação</h2>
 
  1. Feche seu simulador.
- 2. Faça o download do arquivo [aqui](https://github.com/fcamargo10/checklist-c152-fc/releases) ou clone o repositório.
+ 2. Faça o download do arquivo [aqui](https://github.com/fcamargo10/checklist-c152-fc/releases/latest) ou clone o repositório.
  3. Descompacte na pasta **Community do seu FS2020**. 
  4. Abra o simulador, carregue sua aeronave e então abre a aba de checklist.
  
