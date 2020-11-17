@@ -12,7 +12,7 @@
 <hr>
 
 <p align="center"><img src="https://blog.aviadorvirtual.com.br/wp-content/uploads/2020/11/Untitled-1.png"></p>
-<h2>Flight Simulator 2020 Cessna 152 Checklist</h2>
+<h2>Flight Simulator 2020 Cessna 152 Checklist - FS2020</h2>
 
 Olá comandantes!
 Eu criei um checklist interativo aprimorado do Cessna 152 e estou compartilhando com vocês, ele ainda não está completo da forma como eu gostaria mas devagarzinho eu vou atualizando.
