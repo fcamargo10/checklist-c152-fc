@@ -1,5 +1,5 @@
 <p align="center">
- <a href="http://aviadorvirtual.com.br" target="_blank"><img src="https://flight.aviadorvirtual.com.br/img/logo.png" width="270px"></a>
+ <a href="http://aviadorvirtual.com.br" target="_blank"><img src="https://aviadorvirtual.com.br/img/logo.png" width="270px"></a>
 </p>
 
 <p align="center">
