@@ -484,7 +484,7 @@
 
 			<Page SubjectTT="TT:MENU.CHECKLIST.EMERGENCY">
 
-				<Block SubjectTT="Fogo no motor em voo">
+				<Block SubjectTT="Fogo em voo">
 
 					<Checkpoint ReferenceId="Mixture_Lean">
 						<ForceCamera name="Instruments02"/>
