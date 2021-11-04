@@ -25,10 +25,10 @@ Eu criei um checklist interativo aprimorado do Cessna 152 e estou compartilhando
  5. Se quiser usar com o mod **jplogistics-c152** copie o conteudo da pasta<br>
  `Community\checklist-c152-fc\SimObjects\Airplanes\Asobo_C152\Checklist` <br>
  para<br>
- `Community\jplogistics-c152\SimObjects\Airplanes\JPL_C152\Checklist` <br>
+ `Community\jplogistics-c152\SimObjects\Airplanes\JPL_C152\Checklist`<br>
 <br><br>
- If you want use that with **jplogistics-c152** copyt the content of <br>
- `Community\checklist-c152-fc\SimObjects\Airplanes\Asobo_C152\Checklist` to<br>
+ If you want use that with **jplogistics-c152** copyt the content of<br>
+ `Community\checklist-c152-fc\SimObjects\Airplanes\Asobo_C152\Checklist` <br>to<br>
  `Community\jplogistics-c152\SimObjects\Airplanes\JPL_C152\Checklist` 
  
 <hr>
