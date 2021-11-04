@@ -22,12 +22,10 @@ Eu criei um checklist interativo aprimorado do Cessna 152 e estou compartilhando
  2. Faça o download do arquivo [aqui](https://github.com/fcamargo10/checklist-c152-fc/releases/latest) ou clone o repositório.
  3. Descompacte na pasta **Community do seu FS2020**. 
  4. Abra o simulador, carregue sua aeronave e então abre a aba de checklist.
- 5. Se quiser usar com o mod **jplogistics-c152** remova a pasta checklist dele.<br>
+ 5. Se quiser usar com o mod **jplogistics-c152** copie o conteudo da pasta<br>
+ `Community\checklist-c152-fc\SimObjects\Airplanes\Asobo_C152\Checklist` para
  `Community\jplogistics-c152\SimObjects\Airplanes\JPL_C152\Checklist`<br>
- E depois remova as seguintes linhas no arquivo layout.json
- <img src="https://i.imgur.com/kJ5w2kZ.png">
-
- If you want use that with **jplogistics-c152** remove the folder.<br>
+ If you want use that with **jplogistics-c152** copyt the content of `Community\checklist-c152-fc\SimObjects\Airplanes\Asobo_C152\Checklist` to
  `Community\jplogistics-c152\SimObjects\Airplanes\JPL_C152\Checklist` 
  
 <hr>
