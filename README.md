@@ -24,6 +24,9 @@ Eu criei um checklist interativo aprimorado do Cessna 152 e estou compartilhando
  4. Abra o simulador, carregue sua aeronave e então abre a aba de checklist.
  5. Se quiser usar com o mod **jplogistics-c152** remova a pasta checklist dele.<br>
  `Community\jplogistics-c152\SimObjects\Airplanes\JPL_C152\Checklist`<br>
+ E depois remova as seguintes linhas no arquivo layout.json
+ <img src="https://i.imgur.com/kJ5w2kZ.png">
+
  If you want use that with **jplogistics-c152** remove the folder.<br>
  `Community\jplogistics-c152\SimObjects\Airplanes\JPL_C152\Checklist` 
  
